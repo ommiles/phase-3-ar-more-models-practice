@@ -5,7 +5,14 @@ class Person < ActiveRecord::Base
     has_many :waterings
     has_many :waterees, through: :waterings
 
-    def water_plant
+    def water_plant(plant)
+        Watering.create(person_id: self.id, plant_id: plant.id)
+        pp = plant_parenthoods.find_by(plant: plant)
+        if pp
+            affection = pp.affection || 1
+            affection += 1
+            pp.update(affection: affection)
+        end
         # accepts an argument of a plant and 
         # creates a new instance of Watering between the person and the plant; 
         # if there is an associated PlantParenthood with both, 
