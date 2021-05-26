@@ -17,6 +17,8 @@ class PlantParenthood < ActiveRecord::Base
     # end
 
     def cap_affection
+        self.affection = 11_000 if self.affection > 11_000
         # introduces a cap on the affection value at 11_000
+        # if affection is higher than 11_000, change it
     end
 end
