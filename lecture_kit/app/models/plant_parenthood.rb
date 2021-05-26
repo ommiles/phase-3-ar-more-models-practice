@@ -1,5 +1,10 @@
 class PlantParenthood < ActiveRecord::Base
 
+    # lifecycle method
+    # triggered whenever ther is an update or an instance is created
+    # before the save is triggered, AR will look for the cap_affection method
+    before_save :cap_affection
+    
     belongs_to :person
     belongs_to :plant
 
