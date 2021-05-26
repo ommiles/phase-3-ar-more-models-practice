@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "practice",
+            "group": "practice",
+            "database": "${workspaceFolder:lecture_kit}/db/development.sqlite"
+        }
+    ]
+}

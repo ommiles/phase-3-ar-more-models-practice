@@ -1,5 +1,6 @@
 require_relative './config/environment'
 require 'sinatra/activerecord/rake'
+require 'colorize'
 
 desc "Start our app console"
 task :console do
@@ -7,4 +8,18 @@ task :console do
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   # open Pry console, similar to binding.pry
   Pry.start
+end
+
+namespace :remind_me_about do
+  desc "This is a description for our first task."
+  task :task_one do
+    puts "1️⃣ ✨ 💻 THING ONE FROM THE README 💻 ✨"
+    puts "Instructions for the task.".colorize(:red)
+  end
+
+  desc "This is a description for our second task."
+  task :task_two do
+    puts "2️⃣ ✨ 💻 THING TWO FROM THE README 💻 ✨"
+    puts "Instructions for the task.".colorize(:red)
+  end
 end

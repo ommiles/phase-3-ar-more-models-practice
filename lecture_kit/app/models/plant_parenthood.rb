@@ -1,13 +1,13 @@
 class PlantParenthood < ActiveRecord::Base
 
-     belongs_to :plant_parent
+     belongs_to :person
      belongs_to :plant
 
-    # def plant_parents
+    # def people
     #     # before ActiveRecord
-    #     PlantParent.all.select{|plant_parent| plant_parent == self.plant_parents}
+    #     PlantParent.all.select{|person| person == self.people}
     #     # AR:
-    #     id_num = self.plant_parent_id
+    #     id_num = self.person_id
     #     PlantParent.find(id_num)
     # end
 end
