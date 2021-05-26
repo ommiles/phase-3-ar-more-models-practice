@@ -10,4 +10,8 @@ class PlantParenthood < ActiveRecord::Base
     #     id_num = self.person_id
     #     PlantParent.find(id_num)
     # end
+
+    def cap_affection
+        # introduces a cap on the affection value at 11_000
+    end
 end

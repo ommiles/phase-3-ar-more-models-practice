@@ -11,7 +11,17 @@ outdoor = Category.create(name: "outdoor")
 herb = Category.create(name: "herb")
 faux = Category.create(name: "faux")
 succulent = Category.create(name: "succulent")
-indoor = Category.create(name: "indoor")
+indoorINSERT INTO plant_categories (idINSERT INTO plant_categories (id, category_id, plant_id)
+VALUES (
+    id:integer,
+    category_id:integer,
+    plant_id:integer
+  );, category_id, plant_id)
+VALUES (
+    id:integer,
+    category_id:integer,
+    plant_id:integer
+  ); = Category.create(name: "indoor")
 tropical = Category.create(name: "tropical")
 
 basil = Plant.create(species: "basil the herb", bought: "20200610", color: "green", fussy: true)
