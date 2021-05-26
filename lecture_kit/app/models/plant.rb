@@ -4,5 +4,5 @@ class Plant < ActiveRecord::Base
     has_many :plant_categories
     has_many :categories, through: :plant_categories
     has_many :waterings
-    has_many :people, through: :waterings
+    has_many :waterers, through: :waterings
 end
